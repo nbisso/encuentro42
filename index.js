@@ -24,19 +24,49 @@ node_moduels (contiene todo el codigo fuente de las otras librerias que
 
 const moment = require("moment")
 const coolimage = require("cool-images")
+const fs = require("fs")
 
 console.log("CAMBIOOO")
 console.log("CAMBIOOO")
 console.log("CAMBIOOO")
 console.log("CAMBIOOO")
 
-console.log("hola mundo " + moment(new Date()).format("DD/MM/yyyy"))
+console.log(new Date())
+
+console.log("hola mundo " + moment(new Date()).format("DD/MM/YYYY HH:mm:ss"))
 
 
 let images = coolimage.many(800, 800, 10);
+let logMessage = moment(new Date()).format("DD/MM/YYYY hh:mm:ss") + "\n"
 
 for (let i = 0; i < images.length; i++) {
     const image = images[i];
     console.log(image)
 
+    logMessage += image + "\n";
+}
+
+
+log(logMessage)
+
+
+function log(message) {
+    let fileName = "logs.txt";
+
+    let existFile = fs.existsSync(fileName)
+
+    if (!existFile) {
+        fs.writeFileSync(fileName, "")
+    }
+
+    fs.readFile(fileName, (err, data) => {
+        if (err) {
+            console.error("error on get file " + fileName)
+            return;
+        }
+
+        let texto = data.toString();
+        texto += "\n " + message
+        fs.writeFileSync(fileName, texto)
+    })
 }
