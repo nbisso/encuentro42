@@ -12,3 +12,10 @@ Como usar esta aplicacion:
 }`
 
 Cualquier cosa me preguntas
+
+
+# Como iniciar la apliacion:
+
+- npm i
+- npm run start
+- and develop ;)
