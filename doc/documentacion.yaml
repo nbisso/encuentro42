@@ -1,0 +1,37 @@
+openapi: 3.0.0
+
+info:
+  title: asd
+  description: asd
+  version: asd
+  contact:
+    name: Example
+    email: example@example.com
+
+servers:
+  - url: asd
+    description: ads
+
+paths:
+  /api:
+    get:
+      description: Describe this route
+      summary: Describe this route
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+
+      responses:
+        200:
+          description: Description
+          content:
+            application/json:
+              schema:
+                type: string
+components:
+  schemas:
+    name:
+      type: object
