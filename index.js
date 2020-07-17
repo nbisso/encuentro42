@@ -23,6 +23,7 @@ node_moduels (contiene todo el codigo fuente de las otras librerias que
 */
 
 const moment = require("moment")
+const coolimage = require("cool-images")
 
 console.log("CAMBIOOO")
 console.log("CAMBIOOO")
@@ -30,3 +31,12 @@ console.log("CAMBIOOO")
 console.log("CAMBIOOO")
 
 console.log("hola mundo " + moment(new Date()).format("DD/MM/yyyy"))
+
+
+let images = coolimage.many(800, 800, 10);
+
+for (let i = 0; i < images.length; i++) {
+    const image = images[i];
+    console.log(image)
+
+}
