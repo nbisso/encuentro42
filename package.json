@@ -11,7 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "cool-images": "^1.0.3",
-    "moment": "^2.27.0"
+    "moment": "^2.29.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
